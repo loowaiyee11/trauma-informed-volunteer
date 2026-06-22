@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>创伤知情催眠志工｜8月班</title>
+  <meta name="description" content="创伤知情催眠志工8月班，8小时视频课 + 8月陪跑/答疑。先安顿自己，再安全陪伴别人。">
+  <style>
+    :root {
+      --bg: #fff7ed;
+      --paper: #fffaf4;
+      --ink: #3f2a1d;
+      --muted: #765943;
+      --soft: #ffe8d0;
+      --soft-2: #f9eadb;
+      --line: #ecc9ac;
+      --accent: #ea7d35;
+      --accent-dark: #bd5b20;
+      --navy: #0d2d42;
+      --green: #6b9479;
+      --shadow: 0 22px 60px rgba(88, 50, 21, .14);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px clamp(18px, 5vw, 72px);
+      background: rgba(255, 250, 244, .9);
+      border-bottom: 1px solid rgba(236, 201, 172, .68);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .02em;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 22px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(234, 125, 53, .26);
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--accent-dark);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: center;
+      padding: clamp(56px, 8vw, 100px) clamp(22px, 6vw, 86px);
+      background:
+        linear-gradient(90deg, rgba(13, 45, 66, .9) 0%, rgba(13, 45, 66, .74) 42%, rgba(13, 45, 66, .2) 78%),
+        url("assets/hero-wai-yee.jpg") center right / cover no-repeat;
+      color: #fff;
+    }
+
+    .hero-content {
+      max-width: 690px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 20px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 232, 208, .16);
+      color: #ffe8d0;
+      border: 1px solid rgba(255, 232, 208, .34);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    h1, h2, h3 { line-height: 1.18; margin: 0; }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      letter-spacing: .01em;
+      margin-bottom: 22px;
+    }
+
+    .hero-lead {
+      font-size: clamp(20px, 2.4vw, 30px);
+      line-height: 1.45;
+      margin: 0 0 24px;
+      color: #fff4e9;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions, .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 800px;
+    }
+
+    .fact {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 250, 244, .12);
+      border: 1px solid rgba(255, 232, 208, .26);
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .fact span {
+      display: block;
+      color: #ffe8d0;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      padding: clamp(58px, 7vw, 98px) clamp(20px, 6vw, 86px);
+    }
+
+    .section-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .subhead {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 100%;
+      padding: 26px;
+      border-radius: 22px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--ink);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .number {
+      width: 42px;
+      height: 42px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--accent-dark);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: clamp(28px, 5vw, 70px);
+      align-items: center;
+    }
+
+    .image-frame {
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--paper);
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .soft-band {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(255, 232, 208, .8), transparent 32%),
+        radial-gradient(circle at 90% 80%, rgba(249, 234, 219, .9), transparent 30%),
+        #fffaf4;
+    }
+
+    .value-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .value-item {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .value-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .value-item span {
+      color: var(--muted);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .mentor {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .mentor h2 {
+      color: #fff;
+    }
+
+    .mentor .subhead, .mentor p {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .mentor .card {
+      background: rgba(255, 255, 255, .08);
+      border-color: rgba(255, 232, 208, .2);
+      box-shadow: none;
+    }
+
+    .mentor .card h3 {
+      color: #ffe8d0;
+    }
+
+    .two-column-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    ul.clean li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--muted);
+    }
+
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .7em;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .notice {
+      padding: 26px;
+      border-radius: 24px;
+      background: #fff3e6;
+      border: 1px solid #f0c8a6;
+      color: var(--ink);
+    }
+
+    .notice strong {
+      color: var(--accent-dark);
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: 0 12px 34px rgba(88, 50, 21, .08);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    details p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .final-cta {
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(13, 45, 66, .94), rgba(189, 91, 32, .84)),
+        url("assets/hero-wai-yee.jpg") center top / cover no-repeat;
+      color: #fff;
+    }
+
+    .final-cta h2 {
+      color: #fff;
+    }
+
+    .final-cta p {
+      max-width: 720px;
+      margin: 0 auto 26px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 18px;
+    }
+
+    .placeholder {
+      display: inline-flex;
+      padding: 9px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .82);
+      color: var(--accent-dark);
+      font-weight: 800;
+      border: 1px solid var(--line);
+    }
+
+    footer {
+      padding: 26px 20px;
+      text-align: center;
+      color: var(--muted);
+      background: #fffaf4;
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .facts, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3, .split, .two-column-list, .value-grid { grid-template-columns: 1fr; }
+      .hero {
+        min-height: auto;
+        padding-top: 92px;
+        background:
+          linear-gradient(180deg, rgba(13, 45, 66, .92), rgba(13, 45, 66, .74)),
+          url("assets/hero-wai-yee.jpg") center top / cover no-repeat;
+      }
+      .nav-links a:not(.button) { display: none; }
+    }
+
+    @media (max-width: 620px) {
+      .site-nav { padding-inline: 16px; }
+      .brand { font-size: 14px; }
+      .button { width: 100%; }
+      .nav-links .button { width: auto; min-height: 40px; padding: 9px 14px; }
+      .hero-actions, .cta-row { align-items: stretch; }
+      .facts { grid-template-columns: 1fr; }
+      .card { padding: 22px; border-radius: 18px; }
+      section { padding-inline: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="主导航">
+    <div class="brand">创伤知情催眠志工</div>
+    <div class="nav-links">
+      <a href="#value">课程价值</a>
+      <a href="#mentor">导师</a>
+      <a href="#faq">FAQ</a>
+      <a class="button" href="#contact">私讯「志工」</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">8月班｜录播视频课 + 陪跑/答疑</p>
+      <h1>创伤知情<br>催眠志工</h1>
+      <p class="hero-lead">先安顿自己，再安全陪伴别人。</p>
+      <p class="hero-copy">
+        一门给志工、助人者、老师、家长与初学者的8小时课程。学习创伤知情、自我催眠、情绪稳定、基础陪伴与转介意识。
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#contact">私讯「志工」了解详情</a>
+        <a class="button secondary" href="#course">查看课程内容</a>
+      </div>
+      <div class="facts" aria-label="课程重点">
+        <div class="fact"><strong>RM349</strong><span>课程学费</span></div>
+        <div class="fact"><strong>8小时</strong><span>视频课程</span></div>
+        <div class="fact"><strong>Bonus</strong><span>MSHPH一年副会员</span></div>
+        <div class="fact"><strong>证书</strong><span>通过10题考试后获得</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="soft-band">
+      <div class="section-inner">
+        <div class="section-heading center">
+          <h2>你是否也遇过这些时刻？</h2>
+          <p class="subhead">很多人不是没有爱心，而是没有学过如何安全地陪伴。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="number">1</span>
+            <h3>道理都懂，情绪还是过不去</h3>
+            <p>有些情绪不只是想法，也和身体、神经系统与安全感有关。理解这一点，是自我稳定的开始。</p>
+          </article>
+          <article class="card">
+            <span class="number">2</span>
+            <h3>想帮人，却怕说错话</h3>
+            <p>一句“不要想太多”有时并不能真正支持对方。创伤知情帮助我们少一点评判，多一点理解。</p>
+          </article>
+          <article class="card">
+            <span class="number">3</span>
+            <h3>不知道什么时候该转介</h3>
+            <p>安全助人不等于承担一切。志工需要知道可以做什么，也知道什么时候需要专业协助。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="value">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2>这门课帮助你建立四种基础能力</h2>
+          <p class="subhead">用简单、生活化、step-by-step 的方式学习，不鼓吹神秘效果，也不制造依赖。</p>
+        </div>
+        <div class="value-list value-grid">
+          <div class="value-item"><strong>创伤知情</strong><span>理解创伤反应、压力反应、容纳之窗与神经系统调节。</span></div>
+          <div class="value-item"><strong>自我催眠</strong><span>学习放松、专注、回到身体，把自我催眠作为自我调节练习。</span></div>
+          <div class="value-item"><strong>安全陪伴</strong><span>学习陪伴、聆听、支持，而不是急着改变或拯救对方。</span></div>
+          <div class="value-item"><strong>转介意识</strong><span>认识志工边界，知道什么时候需要转介给专业人士。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="course" class="soft-band">
+      <div class="section-inner">
+        <div class="section-heading center">
+          <h2>课程内容：三大部分</h2>
+          <p class="subhead">从理解自己，到稳定自己，再学习如何不越界地陪伴别人。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="number">一</span>
+            <h3>创伤知情</h3>
+            <p>认识 Trauma-Informed 的基本概念，理解为什么情绪会卡住，以及如何避免在助人时造成二次伤害。</p>
+          </article>
+          <article class="card">
+            <span class="number">二</span>
+            <h3>催眠与自我催眠</h3>
+            <p>学习基础自我催眠知识，把它作为放松、专注和情绪稳定的练习，而不是神秘化技巧。</p>
+          </article>
+          <article class="card">
+            <span class="number">三</span>
+            <h3>志工助人技巧</h3>
+            <p>认识志工角色、基础陪伴技巧、建立亲和力，以及如何转介给合适的专业人士。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentor" class="mentor">
+      <div class="section-inner split">
+        <figure class="image-frame">
+          <img src="assets/mentor-wai-yee.jpg" alt="Wai Yee 导师温柔风形象照">
+        </figure>
+        <div>
+          <div class="section-heading">
+            <h2>导师 Wai Yee</h2>
+            <p class="subhead">国际认证催眠治疗师｜身心放松导师｜易经风水师</p>
+          </div>
+          <p>
+            Wai Yee 长期结合东方智慧、催眠、创伤知情实践与企业培训，帮助学员用简单语言理解复杂概念，并把学习带回真实生活。
+          </p>
+          <div class="grid-3" style="margin-top:24px;">
+            <article class="card"><h3>教育为核心</h3><p>先帮助学员理解自己，而不是制造依赖。</p></article>
+            <article class="card"><h3>实践为重点</h3><p>每个概念都回到生活例子、行动练习和反思。</p></article>
+            <article class="card"><h3>边界很清楚</h3><p>强调志工角色、转介意识与不越界助人。</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="section-heading center">
+          <h2>这门课适合谁？</h2>
+          <p class="subhead">适合想学习自我稳定与安全陪伴的人，也会清楚说明不适合的情况。</p>
+        </div>
+        <div class="two-column-list">
+          <article class="card">
+            <h3>适合你，如果你想学习</h3>
+            <ul class="clean">
+              <li>陪伴身边人，但担心自己说错话</li>
+              <li>志工、助人者、老师、家长或社群陪伴者</li>
+              <li>创伤知情、自我催眠与情绪调节</li>
+              <li>先理解自己、安顿自己，再支持别人</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>不适合你，如果你期待</h3>
+            <ul class="clean">
+              <li>快速取得治疗资格</li>
+              <li>学完后马上为别人做催眠治疗</li>
+              <li>用课程取代心理治疗或医疗协助</li>
+              <li>不愿意尊重助人边界与专业转介</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-band">
+      <div class="section-inner">
+        <div>
+          <div class="section-heading">
+            <h2>RM349 包含什么？</h2>
+            <p class="subhead">课程设计以学习、练习和清楚边界为重点。</p>
+          </div>
+          <div class="value-list">
+            <div class="value-item"><strong>8小时录播视频课</strong><span>中文授课，教材为中文 + 部分英文。</span></div>
+            <div class="value-item"><strong>8月陪跑/答疑</strong><span id="runningDetails">日期与次数：<span class="placeholder">[请填写]</span></span></div>
+            <div class="value-item"><strong>Bonus</strong><span>赠送马来西亚 MSHPH 催眠协会一年副会员 Associate Member。</span></div>
+            <div class="value-item"><strong>电子结业证书</strong><span>完成课程并通过10题考试后获得。</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="notice">
+          <strong>重要提醒：</strong>
+          这是《创伤知情催眠志工》课程，不是催眠治疗师课程。完成课程后，不能为别人做催眠治疗。这门课是教育与志工训练，也不能替代专业医疗、心理咨询或心理治疗。遇到高风险或超出志工能力范围的情况，需要转介给合适的专业人士。
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="soft-band">
+      <div class="section-inner">
+        <div class="section-heading center">
+          <h2>常见问题</h2>
+          <p class="subhead">先把边界讲清楚，学习才会更安心。</p>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>我完全没有心理学或催眠基础，适合吗？</summary>
+            <p>适合。课程会用系统化、step-by-step 的方式教学，适合零基础学员。重点不是复杂理论，而是用生活化语言理解创伤知情、自我催眠和基础助人技巧。</p>
+          </details>
+          <details>
+            <summary>这个课程有证书吗？</summary>
+            <p>有。完成课程并通过10题考试后，你会获得《创伤知情催眠志工》电子结业证书。</p>
+          </details>
+          <details>
+            <summary>完成课程后，可以为别人做催眠吗？</summary>
+            <p>不可以。这不是催眠治疗师课程。完成后可以学习和分享安全的基础概念，但不能为别人做催眠治疗。</p>
+          </details>
+          <details>
+            <summary>课程可以替代心理治疗吗？</summary>
+            <p>不可以。课程是教育与志工训练，不能替代专业医疗、心理咨询或心理治疗。</p>
+          </details>
+          <details>
+            <summary>RM349 包含什么？</summary>
+            <p>包含8小时视频课程、8月陪跑/答疑、MSHPH一年副会员 Bonus，以及通过10题考试后的电子结业证书。<span id="packageFaqNote">陪跑日期与答疑次数待填写。</span></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="final-cta">
+      <div class="section-inner">
+        <h2>如果你也想学习更安全地陪伴别人</h2>
+        <p>欢迎从8月开始，先安顿自己，再学习创伤知情、自我催眠和基础助人边界。</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="button" id="messageButton" href="mailto:?subject=我想了解创伤知情催眠志工课程&body=你好，我想了解《创伤知情催眠志工》8月班，请发送课程详情给我。">私讯「志工」了解详情</a>
+          <a class="button secondary" id="registrationButton" href="#">报名链接：[请填写报名链接]</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    《创伤知情催眠志工》8月班。教育与志工训练用途，不替代专业治疗或医疗协助。
+  </footer>
+  <script src="course-info.js"></script>
+  <script>
+    (function () {
+      var info = window.courseInfo || {};
+      var runningDetails = document.getElementById("runningDetails");
+      var packageFaqNote = document.getElementById("packageFaqNote");
+      var messageButton = document.getElementById("messageButton");
+      var registrationButton = document.getElementById("registrationButton");
+
+      if (runningDetails && info.runningDetails) runningDetails.textContent = info.runningDetails;
+      if (packageFaqNote && info.packageFaqNote) packageFaqNote.textContent = info.packageFaqNote;
+
+      if (messageButton) {
+        if (info.messageButtonText) messageButton.textContent = info.messageButtonText;
+        if (info.messageLink) messageButton.href = info.messageLink;
+      }
+
+      if (registrationButton) {
+        if (info.registrationButtonText) registrationButton.textContent = info.registrationButtonText;
+        if (info.registrationLink) registrationButton.href = info.registrationLink;
+      }
+    }());
+  </script>
+</body>
+</html>
